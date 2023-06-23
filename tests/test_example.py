@@ -12,3 +12,9 @@ def test_search_google(browser: browser, search_input):
     browser.get("https://www.google.com/")
     search_bar = browser.find_element(By.XPATH, '//*[@title="Search"]')
     search_bar.send_keys(search_input)
+
+
+# Todo
+#   1. Do Assertions
+#   2. Implicit waits
+#   3. Sensitive test data hiding
