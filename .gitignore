@@ -3,3 +3,6 @@ geckodriver.log
 venv
 __pycache__
 .idea
+playground.py
+/tests/.env
+report.html
