@@ -4,6 +4,14 @@
 ## Running the Test  
 ### Create virtual python environment:  
 `python -m venv venv`  
+
+> You create virtual environment in Python because when you install all
+> the various dependencies, you want to install for this current
+> project. Without virtual environments, you will be installing them on
+> your machine and it will be accessible to ALL projects. This is bad
+> because now you're wasting space by having redundant dependencies on
+> projects that don't even need it.
+
   
 ### Activate virtual environment:  
 Linux/Mac - `source venv/bin/activate`  
@@ -19,10 +27,12 @@ Windows - `venv\Scripts\activate`
 `pytest -n 4`  
   
 ## Run on a a docker container  
-Build container  
+
+### Build container
+
 `docker build -t my_container .`  
   
-Run container  
+### Run container  
 `docker run my_container`  
   
 ## Getting reports
@@ -34,6 +44,7 @@ Now you should be able to see the `report` folder on your current working direct
 
 ## Notes
 ### Default to Firefox
+
 I used Firefox because I do not need to install a driver and add it to my working directory unlike Chrome. If you want to do so, you always can. But remember that you would need to change the browser to `Chrome` in `tests/fixtures/browser.py`. The container would also not work because it only has Firefox. Feel free to install Chrome by adding a command to the `Dockerfile`.
 
 ### Headless
